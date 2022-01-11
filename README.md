@@ -1,2 +1,6 @@
-# IS841-Spring-2022
-Course Repo for the spring delivery of IS841 - Advanced Business Analytics
+![](https://touchmba.com/wp-content/uploads/2017/12/BU-Questrom.png)
+
+---
+
+# IS841 - Advanced Business Analytics: Data Mining - Spring 2022
+
