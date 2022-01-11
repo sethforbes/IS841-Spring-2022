@@ -6,7 +6,7 @@
 
 This repo contains the materials for a course in unsupervised machine learning and text analytics with python.  Students should plan to close this repo and pull the most recent changes before each class meeting.
 
-This class will use QTools for:
+This class will use Blackboard for:
 
 - Assignment submission and exams
 - Larger Annoucements
