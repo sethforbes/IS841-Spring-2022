@@ -23,8 +23,7 @@ The majority of the resources will be found here in this repo, that will be cons
 
 Each class session is as follows (Boston-local time):
 
-1. Cohort A starting at 9:25 AM in Room 222
-2. Cohort B starting at 2:30 PM Room 222 
+- Thursdays 6:30-9:15 in room HAR 310
 
 
 ## Syllabus
