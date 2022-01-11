@@ -2,5 +2,5 @@
 
 ---
 
-## IS841 - Advanced Business Analytics: Data Mining - Spring 2022
+# IS841 - Advanced Business Analytics: Data Mining - Spring 2022
 
