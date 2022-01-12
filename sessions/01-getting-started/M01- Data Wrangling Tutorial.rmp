@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?><process version="9.3.001">
+  <context>
+    <input/>
+    <output/>
+    <macros/>
+  </context>
+  <operator activated="true" class="process" compatibility="9.3.001" expanded="true" name="Process">
+    <parameter key="logverbosity" value="init"/>
+    <parameter key="random_seed" value="2001"/>
+    <parameter key="send_mail" value="never"/>
+    <parameter key="notification_email" value=""/>
+    <parameter key="process_duration_for_mail" value="30"/>
+    <parameter key="encoding" value="SYSTEM"/>
+    <process expanded="true">
+      <portSpacing port="source_input 1" spacing="0"/>
+      <portSpacing port="sink_result 1" spacing="0"/>
+      <description align="center" color="yellow" colored="false" height="67" resized="true" width="136" x="10" y="381">Bring in the Returns from Superstore</description>
+      <description align="center" color="yellow" colored="false" height="164" resized="false" width="180" x="228" y="406">Do an Inner Join and Left Join to see the differences&lt;br&gt;&lt;br&gt;Use the ID attribute (Order ID for both datasets) as the key for the join but can specify 1+ columns without id role</description>
+      <description align="center" color="yellow" colored="false" height="83" resized="true" width="92" x="184" y="132">Change role for Order Id to ID and Sales to Target</description>
+      <description align="center" color="yellow" colored="false" height="89" resized="true" width="144" x="564" y="113">Keep Order ID, Sales, Region, Sub Category, Status, Product Base Margin&lt;br&gt;</description>
+      <description align="center" color="yellow" colored="false" height="108" resized="false" width="180" x="794" y="344">Need to sort for the charts, reminding us that we always need to think about data structures, aggregates, etc. as analysts.</description>
+    </process>
+  </operator>
+</process>

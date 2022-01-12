@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?><process version="9.8.001">
+  <context>
+    <input/>
+    <output/>
+    <macros/>
+  </context>
+  <operator activated="true" class="process" compatibility="9.8.001" expanded="true" name="Process">
+    <parameter key="logverbosity" value="init"/>
+    <parameter key="random_seed" value="2001"/>
+    <parameter key="send_mail" value="never"/>
+    <parameter key="notification_email" value=""/>
+    <parameter key="process_duration_for_mail" value="30"/>
+    <parameter key="encoding" value="SYSTEM"/>
+    <process expanded="true">
+      <portSpacing port="source_input 1" spacing="0"/>
+      <portSpacing port="sink_result 1" spacing="0"/>
+      <description align="center" color="yellow" colored="false" height="403" resized="true" width="132" x="20" y="18">Import&lt;br/&gt;</description>
+      <description align="center" color="yellow" colored="false" height="403" resized="false" width="132" x="166" y="14">Merge Orders and Returns with Orders as LHS</description>
+      <description align="center" color="yellow" colored="false" height="403" resized="false" width="132" x="305" y="15">Merge Reps onto Orders with Orders being LHS</description>
+      <description align="center" color="orange" colored="true" height="275" resized="true" width="190" x="396" y="477">Replace Missing Return Status&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;Replace with Value Not Returned</description>
+      <description align="center" color="green" colored="true" height="88" resized="true" width="183" x="34" y="687">Your team needs an pipeline to study sales data from the CRM. They only have Excel Reports.</description>
+      <description align="center" color="orange" colored="true" height="372" resized="false" width="126" x="620" y="471">Order Priority&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;Not Intuitive, but Average is the Mode for a Categorical Variable</description>
+      <description align="center" color="green" colored="true" height="210" resized="true" width="291" x="623" y="224">Subset Any 5 Columns&lt;br/&gt;and keep only examples (rows) with sales &amp;gt; 500&lt;br/&gt;[You need two operators]</description>
+      <description align="center" color="gray" colored="true" height="310" resized="true" width="236" x="797" y="656">Create new features&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;1) Sales ^2&lt;br&gt;2) days between ship and order date [ TRICKY]&lt;br&gt;3) number of characters in product name&lt;br&gt;</description>
+      <description align="center" color="red" colored="true" height="187" resized="true" width="210" x="921" y="402">Save your output&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;&lt;br/&gt;NOTE: the delimiter&lt;br&gt;</description>
+    </process>
+  </operator>
+</process>
