@@ -49,3 +49,9 @@ The link below is available via your BU accounts.
 > Should you have any issues, please post issues to our Forums here on Github.  
 
 
+## RapidMiner Extensions
+
+Below is a screenshot of the extensions that I currently have installed.  
+
+![](https://snipboard.io/CO5gQu.jpg)
+
