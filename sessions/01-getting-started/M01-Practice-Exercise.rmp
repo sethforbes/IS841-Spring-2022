@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?><process version="9.10.001">
+  <context>
+    <input/>
+    <output/>
+    <macros/>
+  </context>
+  <operator activated="true" class="process" compatibility="9.10.001" expanded="true" name="Process">
+    <parameter key="logverbosity" value="init"/>
+    <parameter key="random_seed" value="2001"/>
+    <parameter key="send_mail" value="never"/>
+    <parameter key="notification_email" value=""/>
+    <parameter key="process_duration_for_mail" value="30"/>
+    <parameter key="encoding" value="SYSTEM"/>
+    <process expanded="true">
+      <portSpacing port="source_input 1" spacing="0"/>
+      <portSpacing port="sink_result 1" spacing="0"/>
+      <description align="left" color="yellow" colored="false" height="186" resized="true" width="632" x="50" y="15">Practice Exercise&lt;br&gt;&lt;br&gt;1. Read in the CSV dataset (module 1 About file)&lt;br&gt;2. Create a grouping ggregation that counts the number of rows for each store id&lt;br&gt;3. Rename the aggregation column to simply say &amp;quot;count&amp;quot;&lt;br&gt;4. Create a new grouping aggregation that summarizes the total sales by store id.&lt;br&gt;5. Write the aggregation results to a csv (be careful, the default separator is ;)&lt;br&gt;6. Filter the rows of the ExampleSet to only include rows where the weekly sales &amp;gt;= 20,000&lt;br/&gt;7. Create a new feature that is weekly sales / 7. Call this new attribute daily sales.&lt;br&gt;&lt;br&gt;</description>
+    </process>
+  </operator>
+</process>
