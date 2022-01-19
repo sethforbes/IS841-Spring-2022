@@ -19,3 +19,11 @@ This contains links to helpful resources and tutorials for RapidMiner as well as
 - [Information Gain - A Gentle Introduction](https://victorzhou.com/blog/information-gain/)
 - [Understanding Gradient Boosting](https://towardsdatascience.com/understanding-gradient-boosting-machines-9be756fe76ab)
 
+## RapidMiner and python 
+
+- [Run python code in an RM process](https://docs.rapidminer.com/9.10/studio/connect/python/index.html)
+- [RM python library - Review the examples](https://github.com/rapidminer/python-rapidminer)
+
+> It's worth noting that the python integration with RM has dramatically increased over the last year or so.  Not to mention, RM has provided ways to create custom bits (operators, extensions, etc.) for use up and down their stack.  This includes an integration with ML toolkits like scikit-learn.
+
+
