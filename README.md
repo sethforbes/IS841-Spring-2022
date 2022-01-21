@@ -30,7 +30,7 @@ Each class session is as follows (Boston-local time):
 
 The link below is available via your BU accounts.
 
-[IS841 Spring 2022 Syllabus](https://docs.google.com/document/d/1zNsD22cBDKiBiUsK-3QAoXnJ1z9yJF1oh0gEfUpr4Ws/edit?usp=sharing)
+[IS841 Spring 2022 Syllabus](https://docs.google.com/document/d/e/2PACX-1vTHtfR9TXBBmMvD0u7i8jp-ezKI4nV04Z_nXEKEOUqj3KgGPidwYpKhQlHRgXJX-4bJWc3CQGBfE0uX/pub)
 
 > NOTE: I reserve the right to modify the syllabus at any time at my discretion.
 
