@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?><process version="9.10.001">
+  <context>
+    <input/>
+    <output/>
+    <macros/>
+  </context>
+  <operator activated="true" class="process" compatibility="9.10.001" expanded="true" name="Process">
+    <parameter key="logverbosity" value="init"/>
+    <parameter key="random_seed" value="841"/>
+    <parameter key="send_mail" value="never"/>
+    <parameter key="notification_email" value=""/>
+    <parameter key="process_duration_for_mail" value="30"/>
+    <parameter key="encoding" value="SYSTEM"/>
+    <process expanded="true">
+      <operator activated="true" class="read_excel" compatibility="9.10.001" expanded="true" height="68" name="Orders" width="90" x="45" y="34">
+        <parameter key="excel_file" value="/Users/brock2/Downloads/superstore.xlsx"/>
+        <parameter key="sheet_selection" value="sheet number"/>
+        <parameter key="sheet_number" value="1"/>
+        <parameter key="imported_cell_range" value="A1"/>
+        <parameter key="encoding" value="SYSTEM"/>
+        <parameter key="first_row_as_names" value="true"/>
+        <list key="annotations"/>
+        <parameter key="date_format" value=""/>
+        <parameter key="time_zone" value="SYSTEM"/>
+        <parameter key="locale" value="English (United States)"/>
+        <parameter key="read_all_values_as_polynominal" value="false"/>
+        <list key="data_set_meta_data_information">
+          <parameter key="0" value="Row ID.true.integer.attribute"/>
+          <parameter key="1" value="Order Priority.true.polynominal.attribute"/>
+          <parameter key="2" value="Discount.true.real.attribute"/>
+          <parameter key="3" value="Unit Price.true.real.attribute"/>
+          <parameter key="4" value="Shipping Cost.true.real.attribute"/>
+          <parameter key="5" value="Customer ID.true.integer.attribute"/>
+          <parameter key="6" value="Customer Name.true.polynominal.attribute"/>
+          <parameter key="7" value="Ship Mode.true.polynominal.attribute"/>
+          <parameter key="8" value="Customer Segment.true.polynominal.attribute"/>
+          <parameter key="9" value="Product Category.true.polynominal.attribute"/>
+          <parameter key="10" value="Product Sub-Category.true.polynominal.attribute"/>
+          <parameter key="11" value="Product Container.true.polynominal.attribute"/>
+          <parameter key="12" value="Product Name.true.polynominal.attribute"/>
+          <parameter key="13" value="Product Base Margin.true.real.attribute"/>
+          <parameter key="14" value="Region.true.polynominal.attribute"/>
+          <parameter key="15" value="State or Province.true.polynominal.attribute"/>
+          <parameter key="16" value="City.true.polynominal.attribute"/>
+          <parameter key="17" value="Postal Code.true.integer.attribute"/>
+          <parameter key="18" value="Order Date.true.date.attribute"/>
+          <parameter key="19" value="Ship Date.true.date.attribute"/>
+          <parameter key="20" value="Profit.true.real.attribute"/>
+          <parameter key="21" value="Quantity ordered new.true.integer.attribute"/>
+          <parameter key="22" value="Sales.true.real.attribute"/>
+          <parameter key="23" value="Order ID.true.integer.attribute"/>
+        </list>
+        <parameter key="read_not_matching_values_as_missings" value="false"/>
+      </operator>
+      <operator activated="true" class="set_role" compatibility="9.10.001" expanded="true" height="82" name="Orders with ID" width="90" x="179" y="34">
+        <parameter key="attribute_name" value="Order ID"/>
+        <parameter key="target_role" value="id"/>
+        <list key="set_additional_roles"/>
+      </operator>
+      <operator activated="true" class="read_excel" compatibility="9.10.001" expanded="true" height="68" name="Returns" width="90" x="45" y="238">
+        <parameter key="excel_file" value="/Users/brock2/Downloads/superstore.xlsx"/>
+        <parameter key="sheet_selection" value="sheet number"/>
+        <parameter key="sheet_number" value="2"/>
+        <parameter key="imported_cell_range" value="A1"/>
+        <parameter key="encoding" value="SYSTEM"/>
+        <parameter key="first_row_as_names" value="true"/>
+        <list key="annotations"/>
+        <parameter key="date_format" value=""/>
+        <parameter key="time_zone" value="SYSTEM"/>
+        <parameter key="locale" value="English (United States)"/>
+        <parameter key="read_all_values_as_polynominal" value="false"/>
+        <list key="data_set_meta_data_information">
+          <parameter key="0" value="Order ID.true.integer.attribute"/>
+          <parameter key="1" value="Status.true.polynominal.attribute"/>
+        </list>
+        <parameter key="read_not_matching_values_as_missings" value="false"/>
+      </operator>
+      <operator activated="true" class="concurrency:join" compatibility="9.10.001" expanded="true" height="82" name="Join" width="90" x="380" y="136">
+        <parameter key="remove_double_attributes" value="true"/>
+        <parameter key="join_type" value="left"/>
+        <parameter key="use_id_attribute_as_key" value="false"/>
+        <list key="key_attributes">
+          <parameter key="Order ID" value="Order ID"/>
+        </list>
+        <parameter key="keep_both_join_attributes" value="false"/>
+      </operator>
+      <operator activated="true" class="replace_missing_values" compatibility="9.10.001" expanded="true" height="103" name="Replace Missing Values" width="90" x="581" y="136">
+        <parameter key="return_preprocessing_model" value="false"/>
+        <parameter key="create_view" value="false"/>
+        <parameter key="attribute_filter_type" value="single"/>
+        <parameter key="attribute" value="Product Base Margin"/>
+        <parameter key="attributes" value=""/>
+        <parameter key="use_except_expression" value="false"/>
+        <parameter key="value_type" value="attribute_value"/>
+        <parameter key="use_value_type_exception" value="false"/>
+        <parameter key="except_value_type" value="time"/>
+        <parameter key="block_type" value="attribute_block"/>
+        <parameter key="use_block_type_exception" value="false"/>
+        <parameter key="except_block_type" value="value_matrix_row_start"/>
+        <parameter key="invert_selection" value="false"/>
+        <parameter key="include_special_attributes" value="false"/>
+        <parameter key="default" value="average"/>
+        <list key="columns"/>
+      </operator>
+      <connect from_op="Orders" from_port="output" to_op="Orders with ID" to_port="example set input"/>
+      <connect from_op="Orders with ID" from_port="example set output" to_op="Join" to_port="left"/>
+      <connect from_op="Returns" from_port="output" to_op="Join" to_port="right"/>
+      <connect from_op="Join" from_port="join" to_op="Replace Missing Values" to_port="example set input"/>
+      <connect from_op="Replace Missing Values" from_port="example set output" to_port="result 1"/>
+      <connect from_op="Replace Missing Values" from_port="original" to_port="result 2"/>
+      <portSpacing port="source_input 1" spacing="0"/>
+      <portSpacing port="sink_result 1" spacing="0"/>
+      <portSpacing port="sink_result 2" spacing="0"/>
+      <portSpacing port="sink_result 3" spacing="0"/>
+      <description align="center" color="yellow" colored="false" height="105" resized="false" width="180" x="22" y="322">Bring in the Returns sheet from the Superstore dataset&lt;br/&gt;</description>
+      <description align="center" color="yellow" colored="false" height="105" resized="false" width="180" x="483" y="394">Next week will we dive into aggregations and filtering</description>
+    </process>
+  </operator>
+</process>
