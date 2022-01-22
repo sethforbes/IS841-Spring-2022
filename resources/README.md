@@ -26,4 +26,10 @@ This contains links to helpful resources and tutorials for RapidMiner as well as
 
 > It's worth noting that the python integration with RM has dramatically increased over the last year or so.  Not to mention, RM has provided ways to create custom bits (operators, extensions, etc.) for use up and down their stack.  This includes an integration with ML toolkits like scikit-learn.
 
+## GCP Getting Started
+
+I created a setup guide to help walk you through the process of claiming your free $300 GCP credits.  Please refer to the document below.
+
+- [Account Creation Walk-Through](https://docs.google.com/document/d/1A5GkLe9sH1faF3mSouJDLBRu7VH5Bs_Lzq6grn8BuFs/edit?usp=sharing)
+
 
