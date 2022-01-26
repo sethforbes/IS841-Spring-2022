@@ -17,4 +17,5 @@ Using the same `Superstore` dataset from last week:
 1.  Replace the missing values for the Product Base Margin with the average of the valid alues.
 
 
-## 
+## Data Wrangline and EDA
+
