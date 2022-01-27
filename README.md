@@ -48,6 +48,11 @@ The link below is available via your BU accounts.
 
 > Should you have any issues, please post issues to our Forums here on Github.  
 
+## Google Cloud
+
+- The Link to redeem an additional $50 credits is avaialble on the Syllabus
+- The credits will most likely be added as an aditional Educational Billing Account.  For any project on GCP, you can select the billing account you want to apply. Just keep an eye on your free credits so that you can switch accounts as needed, but you shouldn't ever have to pay to use the cloud resources based on the needs for this course.  
+
 
 ## RapidMiner Extensions
 
