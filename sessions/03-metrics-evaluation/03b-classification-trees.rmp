@@ -15,7 +15,7 @@
       <portSpacing port="source_input 1" spacing="0"/>
       <portSpacing port="sink_result 1" spacing="0"/>
       <description align="center" color="yellow" colored="false" height="126" resized="true" width="815" x="101" y="27">Classificaation Trees&lt;br/&gt;&lt;br/&gt;- Open MNIST from Course Datasets here in RM&lt;br/&gt;- Quick Dataset Review for understanding&lt;br/&gt;- Cache and Train test split&lt;br/&gt;- Fit model and apply metrics</description>
-      <description align="center" color="red" colored="true" height="221" resized="false" width="461" x="288" y="350">Random Forest Comparison&lt;br/&gt;&lt;br/&gt;Takes ~ 60 seconds to run. This is normal.&lt;br&gt;&lt;br&gt;Two stages:&lt;br&gt;- basic options (depth 10 for both) no pre-pruning&lt;br&gt;- depth 40 with standard options pre-purning&lt;br&gt;&lt;br&gt;Highlights key takeaway for how &amp;quot;newer&amp;quot; approaches aren't always better and in all cases, sometimes it comes down to finetuning and evaluation of the parameters</description>
+      <description align="center" color="red" colored="true" height="221" resized="false" width="461" x="53" y="478">Random Forest Comparison&lt;br/&gt;&lt;br/&gt;Takes ~ 60 seconds to run. This is normal.&lt;br&gt;&lt;br&gt;Two stages:&lt;br&gt;- basic options (depth 10 for both) no pre-pruning&lt;br&gt;- depth 40 with standard options pre-purning&lt;br&gt;&lt;br&gt;Highlights key takeaway for how &amp;quot;newer&amp;quot; approaches aren't always better and in all cases, sometimes it comes down to finetuning and evaluation of the parameters</description>
     </process>
   </operator>
 </process>

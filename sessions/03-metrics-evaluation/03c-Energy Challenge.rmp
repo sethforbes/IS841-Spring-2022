@@ -12,8 +12,8 @@
     <parameter key="process_duration_for_mail" value="30"/>
     <parameter key="encoding" value="SYSTEM"/>
     <process expanded="true">
-      <operator activated="true" class="read_csv" compatibility="9.10.001" expanded="true" height="68" name="Diamonds" width="90" x="45" y="201">
-        <parameter key="csv_file" value="https://vincentarelbundock.github.io/Rdatasets/csv/ggplot2/diamonds.csv"/>
+      <operator activated="false" class="read_csv" compatibility="9.10.001" expanded="true" height="68" name="Energy" width="90" x="45" y="222">
+        <parameter key="csv_file" value="https://archive.ics.uci.edu/ml/machine-learning-databases/00618/Steel_industry_data.csv"/>
         <parameter key="column_separators" value=","/>
         <parameter key="trim_lines" value="false"/>
         <parameter key="use_quotes" value="true"/>
@@ -36,13 +36,11 @@
         <parameter key="read_all_values_as_polynominal" value="false"/>
         <list key="data_set_meta_data_information"/>
         <parameter key="read_not_matching_values_as_missings" value="true"/>
-        <description align="center" color="transparent" colored="false" width="126">We can read datasets from the Web</description>
       </operator>
-      <connect from_op="Diamonds" from_port="output" to_port="result 1"/>
       <portSpacing port="source_input 1" spacing="0"/>
       <portSpacing port="sink_result 1" spacing="0"/>
-      <portSpacing port="sink_result 2" spacing="0"/>
-      <description align="center" color="yellow" colored="false" height="195" resized="true" width="306" x="97" y="10">Regression Trees&lt;br&gt;&lt;br&gt;- Leverage Caching Operator/ save file&lt;br&gt;- Fit a Decision Tree&lt;br&gt;- Review Output&lt;br&gt;- Train/Test Split&lt;br&gt;- Apply Model&lt;br&gt;- Regression Metrics</description>
+      <description align="center" color="yellow" colored="false" height="189" resized="true" width="599" x="77" y="10">Regression Challenge&lt;br&gt;&lt;br&gt;- Using the dataset, fit a regression model to predict the energy usage (Usage kw/h)&lt;br&gt;&lt;br&gt;- Review the data (data cleaning, column selection, set roles, etc.)&lt;br&gt;&lt;br&gt;- 80/20 split on the data&lt;br&gt;&lt;br&gt;- Compare the MAPE on the test set</description>
+      <description align="center" color="yellow" colored="false" height="54" resized="true" width="594" x="14" y="611">Data Source:&lt;br&gt;https://archive.ics.uci.edu/ml/datasets/Steel+Industry+Energy+Consumption+Dataset</description>
     </process>
   </operator>
 </process>
