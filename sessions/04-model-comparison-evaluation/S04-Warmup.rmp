@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?><process version="9.10.001">
+  <context>
+    <input/>
+    <output/>
+    <macros/>
+  </context>
+  <operator activated="true" class="process" compatibility="9.10.001" expanded="true" name="Process">
+    <parameter key="logverbosity" value="init"/>
+    <parameter key="random_seed" value="2001"/>
+    <parameter key="send_mail" value="never"/>
+    <parameter key="notification_email" value=""/>
+    <parameter key="process_duration_for_mail" value="30"/>
+    <parameter key="encoding" value="SYSTEM"/>
+    <process expanded="true">
+      <portSpacing port="source_input 1" spacing="0"/>
+      <portSpacing port="sink_result 1" spacing="0"/>
+      <description align="left" color="gray" colored="true" height="111" resized="true" width="376" x="28" y="10">Warmup Exercise:&lt;br/&gt;- Load in the disease dataset from /datasets&lt;br/&gt;- Perform any necessary data cleaning and prep&lt;br/&gt;- Fit a classification tree to predict the diagnosis column&lt;br/&gt;- Use a 70/30 split and review the test set for accuracy&lt;br/&gt;</description>
+    </process>
+  </operator>
+</process>
