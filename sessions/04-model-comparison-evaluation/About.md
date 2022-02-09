@@ -10,10 +10,16 @@ Metrics Workbook: https://docs.google.com/spreadsheets/d/1MTjHc7TaEvfvIh10Y3JFpS
 
 
 
-
 ## Warmup Exercise
 
-- Diamonds Classification
+- Medical Diagnosis Classification
+- The notes on the starter process can help provide the task.
+
+
+## Data Challenge
+
+- Server address:
+- Apply a model of your choice to the training set and upload your predictions
 
 
 
