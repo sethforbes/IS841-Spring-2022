@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?><process version="9.10.001">
+  <context>
+    <input/>
+    <output/>
+    <macros/>
+  </context>
+  <operator activated="true" class="process" compatibility="9.10.001" expanded="true" name="Process">
+    <parameter key="logverbosity" value="init"/>
+    <parameter key="random_seed" value="2001"/>
+    <parameter key="send_mail" value="never"/>
+    <parameter key="notification_email" value=""/>
+    <parameter key="process_duration_for_mail" value="30"/>
+    <parameter key="encoding" value="SYSTEM"/>
+    <process expanded="true">
+      <operator activated="false" class="write_csv" compatibility="9.10.001" expanded="true" height="82" name="Write CSV" width="90" x="545" y="34">
+        <parameter key="column_separator" value=","/>
+        <parameter key="write_attribute_names" value="true"/>
+        <parameter key="quote_nominal_values" value="true"/>
+        <parameter key="format_date_attributes" value="true"/>
+        <parameter key="date_format" value="yyyy-MM-dd HH:mm:ss"/>
+        <parameter key="append_to_file" value="false"/>
+        <parameter key="encoding" value="SYSTEM"/>
+        <description align="center" color="transparent" colored="false" width="126">Column sep changed to ,</description>
+      </operator>
+      <portSpacing port="source_input 1" spacing="0"/>
+      <portSpacing port="sink_result 1" spacing="0"/>
+      <description align="left" color="green" colored="true" height="163" resized="true" width="659" x="28" y="10">Tips and Tricks:&lt;br&gt;&lt;br&gt;- The RM datasets are in /challenges/session-04&lt;br&gt;- Write CSV uses ;. by default so you will need to change this&lt;br&gt;- The Multiply Operator helps you replicate objects like datasets and models&lt;br&gt;- Upload your CSV file (ID/LABEL) to http://34.150.129.108:8501/&lt;br&gt;- The sample submission file is an example of a valid file to upload&lt;br&gt;&lt;br&gt;&lt;br&gt;</description>
+    </process>
+  </operator>
+</process>
