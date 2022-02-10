@@ -18,7 +18,7 @@ Metrics Workbook: https://docs.google.com/spreadsheets/d/1MTjHc7TaEvfvIh10Y3JFpS
 
 ## Data Challenge
 
-- Server address:
+- Server address:  http://34.150.129.108:8501/
 - Apply a model of your choice to the training set and upload your predictions
 
 
