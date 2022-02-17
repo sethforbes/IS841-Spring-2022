@@ -18,6 +18,7 @@ This contains links to helpful resources and tutorials for RapidMiner as well as
 - [Classification Metrics](https://en.wikipedia.org/wiki/Precision_and_recall) 
 - [Information Gain - A Gentle Introduction](https://victorzhou.com/blog/information-gain/)
 - [Understanding Gradient Boosting](https://towardsdatascience.com/understanding-gradient-boosting-machines-9be756fe76ab)
+- [Podcast: Data Skeptic K-Means](https://dataskeptic.com/blog/episodes/2022/k-means-clustering)
 
 ## RapidMiner and python 
 
