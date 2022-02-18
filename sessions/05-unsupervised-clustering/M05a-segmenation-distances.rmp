@@ -34,7 +34,7 @@
         <parameter key="target_role" value="id"/>
         <list key="set_additional_roles"/>
       </operator>
-      <operator activated="true" class="select_attributes" compatibility="9.10.001" expanded="true" height="82" name="Select Attributes" width="90" x="316" y="183">
+      <operator activated="true" class="select_attributes" compatibility="9.10.001" expanded="true" height="82" name="Select Attributes" width="90" x="315" y="183">
         <parameter key="attribute_filter_type" value="all"/>
         <parameter key="attribute" value=""/>
         <parameter key="attributes" value=""/>
@@ -50,7 +50,7 @@
         <description align="center" color="transparent" colored="false" width="126">Keep just numeric data or keep all</description>
       </operator>
       <operator activated="true" class="data_to_similarity" compatibility="9.10.001" expanded="true" height="82" name="Data to Similarity" width="90" x="459" y="151">
-        <parameter key="measure_types" value="NumericalMeasures"/>
+        <parameter key="measure_types" value="MixedMeasures"/>
         <parameter key="mixed_measure" value="MixedEuclideanDistance"/>
         <parameter key="nominal_measure" value="NominalDistance"/>
         <parameter key="numerical_measure" value="EuclideanDistance"/>
