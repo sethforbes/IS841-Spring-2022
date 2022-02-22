@@ -19,6 +19,7 @@ This contains links to helpful resources and tutorials for RapidMiner as well as
 - [Information Gain - A Gentle Introduction](https://victorzhou.com/blog/information-gain/)
 - [Understanding Gradient Boosting](https://towardsdatascience.com/understanding-gradient-boosting-machines-9be756fe76ab)
 - [Podcast: Data Skeptic K-Means](https://dataskeptic.com/blog/episodes/2022/k-means-clustering)
+- [Podcast: Data Skeptic Tracking Elephants with DBSCAN and KMeans](https://dataskeptic.com/blog/episodes/2022/tracking-elephant-clusters)
 
 ## RapidMiner and python 
 

@@ -14,7 +14,7 @@
     <process expanded="true">
       <portSpacing port="source_input 1" spacing="0"/>
       <portSpacing port="sink_result 1" spacing="0"/>
-      <description align="left" color="gray" colored="true" height="150" resized="true" width="840" x="34" y="15">Hands-on Challenge:&lt;br&gt;&lt;br&gt;- Use the Airline Satisfaction Dataset and only keep the numeric columns that you believe are relevant (e.g. should you include age?)&lt;br&gt;- Exclude/Ignore other columns, but remember, if you can always join on the data later after clustering for profilling!&lt;br&gt;- Perform and data preprocessing you like.&lt;br&gt;- Cluster the data however you like. What did you find? Does it align to the satisfaction column that was in the original dataset?</description>
+      <description align="center" color="gray" colored="true" height="160" resized="true" width="538" x="103" y="12">Warmup Exercise&lt;br&gt;- Read in the Cars dataset from /datasets for the class repo&lt;br&gt;- Perform any necessary data cleaning/filtering steps&lt;br&gt;- Apply Hclust to the data&lt;br&gt;- Review the solutions (you may need to run a few times)&lt;br&gt;- Flatten the clusters to extract the clusters&lt;br&gt;- Write the CSV file for review in Tableau&lt;br&gt;</description>
     </process>
   </operator>
 </process>
