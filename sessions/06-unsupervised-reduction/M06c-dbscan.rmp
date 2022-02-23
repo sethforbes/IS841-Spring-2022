@@ -12,9 +12,9 @@
     <parameter key="process_duration_for_mail" value="30"/>
     <parameter key="encoding" value="SYSTEM"/>
     <process expanded="true">
-      <operator activated="false" class="operator_toolbox:caching_subprocess" compatibility="2.12.000" expanded="true" height="82" name="Penguins" width="90" x="71" y="104">
+      <operator activated="true" class="operator_toolbox:caching_subprocess" compatibility="2.12.000" expanded="true" height="82" name="Penguins" width="90" x="71" y="104">
         <parameter key="caching_strategy" value="auto"/>
-        <parameter key="cache_uuid" value="57369e39-3431-468d-bb3d-8c761d3955bf"/>
+        <parameter key="cache_uuid" value="d6b3051f-ba6c-453b-a28e-3a1df525bd11"/>
         <process expanded="true">
           <operator activated="true" class="retrieve" compatibility="9.10.001" expanded="true" height="68" name="Retrieve penguins (3)" width="90" x="45" y="81">
             <parameter key="repository_entry" value="../../datasets/penguins"/>
@@ -99,7 +99,7 @@
         </process>
         <description align="center" color="transparent" colored="false" width="126">Review data cleaning steps</description>
       </operator>
-      <operator activated="false" class="select_attributes" compatibility="9.10.001" expanded="true" height="82" name="Keep Numeric" width="90" x="237" y="92">
+      <operator activated="true" class="select_attributes" compatibility="9.10.001" expanded="true" height="82" name="Keep Numeric" width="90" x="237" y="92">
         <parameter key="attribute_filter_type" value="value_type"/>
         <parameter key="attribute" value=""/>
         <parameter key="attributes" value="bill_depth_mm|bill_length_mm|body_mass_g|flipper_length_mm"/>
@@ -113,7 +113,7 @@
         <parameter key="invert_selection" value="false"/>
         <parameter key="include_special_attributes" value="false"/>
       </operator>
-      <operator activated="false" class="normalize" compatibility="9.10.001" expanded="true" height="103" name="Normalize" width="90" x="394" y="97">
+      <operator activated="true" class="normalize" compatibility="9.10.001" expanded="true" height="103" name="Normalize" width="90" x="394" y="97">
         <parameter key="return_preprocessing_model" value="false"/>
         <parameter key="create_view" value="false"/>
         <parameter key="attribute_filter_type" value="all"/>
@@ -134,16 +134,23 @@
         <parameter key="allow_negative_values" value="false"/>
         <description align="center" color="transparent" colored="false" width="126">This is a model that can be Applied to new data!</description>
       </operator>
-      <operator activated="false" class="dbscan_apache" compatibility="9.10.001" expanded="true" height="103" name="DBSCAN" width="90" x="571" y="95">
-        <parameter key="epsilon" value="1.0"/>
+      <operator activated="true" class="dbscan_apache" compatibility="9.10.001" expanded="true" height="103" name="DBSCAN" width="90" x="571" y="95">
+        <parameter key="epsilon" value="3.0"/>
         <parameter key="minimal_points" value="5"/>
         <description align="center" color="transparent" colored="false" width="126">Use 3d scatterplot&lt;br/&gt;Can also think about calcuating distances up front and looking for elbow of distance to set eps</description>
       </operator>
+      <connect from_op="Penguins" from_port="out 1" to_op="Keep Numeric" to_port="example set input"/>
+      <connect from_op="Keep Numeric" from_port="example set output" to_op="Normalize" to_port="example set input"/>
+      <connect from_op="Normalize" from_port="example set output" to_op="DBSCAN" to_port="example set"/>
+      <connect from_op="DBSCAN" from_port="example set" to_port="result 1"/>
+      <connect from_op="DBSCAN" from_port="model" to_port="result 2"/>
       <portSpacing port="source_input 1" spacing="0"/>
       <portSpacing port="sink_result 1" spacing="0"/>
+      <portSpacing port="sink_result 2" spacing="0"/>
+      <portSpacing port="sink_result 3" spacing="0"/>
       <description align="left" color="green" colored="true" height="355" resized="true" width="788" x="20" y="20">DBSCAN</description>
       <description align="center" color="yellow" colored="false" height="105" resized="false" width="180" x="732" y="236">The Score is the closest distance to a point within the cluster</description>
-      <description align="center" color="red" colored="true" height="50" resized="true" width="777" x="24" y="425">Quick Exercise: Play aroudn wiith larger and smaller parameters for the DBSCAN. What do you notice?</description>
+      <description align="center" color="red" colored="true" height="50" resized="true" width="777" x="24" y="425">Quick Exercise: Play around wiith larger and smaller parameters for the DBSCAN. What do you notice when you increase or decreate the eps (neighborhood)?</description>
     </process>
   </operator>
 </process>
