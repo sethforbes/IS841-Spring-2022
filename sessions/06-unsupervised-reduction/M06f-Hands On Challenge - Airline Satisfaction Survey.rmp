@@ -18,7 +18,7 @@
       </operator>
       <portSpacing port="source_input 1" spacing="0"/>
       <portSpacing port="sink_result 1" spacing="0"/>
-      <description align="left" color="gray" colored="true" height="150" resized="true" width="840" x="34" y="15">Hands-on Challenge:&lt;br&gt;&lt;br&gt;- Use the Airline Satisfaction Dataset and only keep the numeric columns that you believe are relevant (e.g. should you include age?)&lt;br&gt;- Exclude/Ignore other columns, but remember, if you can always join on the data later after clustering for profilling!&lt;br&gt;- Perform and data preprocessing you like.&lt;br&gt;- Cluster the data however you like. What did you find? Does it align to the satisfaction column that was in the original dataset?</description>
+      <description align="left" color="gray" colored="true" height="150" resized="true" width="840" x="34" y="15">Hands-on Challenge:&lt;br&gt;- Goal: Model the satisfaction column&lt;br/&gt;- Performa any necessary data cleaning steps&lt;br/&gt;- Combine PCA with any other techinques discussed this semester&lt;br/&gt;- How well does your model perform?</description>
     </process>
   </operator>
 </process>
