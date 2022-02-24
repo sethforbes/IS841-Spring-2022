@@ -38,7 +38,7 @@
 | ![](https://docs.rapidminer.com/latest/studio/operators/img/operators/split-data.svg)  | Split Data  | Use this to create splits for your data.  Commonly used to create reproducible Train/Test splits. |
 | ![](https://docs.rapidminer.com/latest/studio/operators/img/operators/apply-model.svg)  | Apply Model  | Use this operator to apply the model to a new set of data.  Note: Operators like `Normalize` are also Models; they are referred to as pre-processing models and have a `pre` name on the ouput port. |
 | ![](https://docs.rapidminer.com/latest/studio/operators/img/operators/performance-classification.svg)  | Performance - Classification |  Performance metrics for classification models |
-| ![](https://docs.rapidminer.com/latest/studio/operators/img/operators/performance-regression.svg)  | Performance Regression || Performance metrics for regression models |
+| ![](https://docs.rapidminer.com/latest/studio/operators/img/operators/performance-regression.svg)  | Performance Regression | Performance metrics for regression models |
 | ![](https://docs.rapidminer.com/latest/studio/operators/img/operators/cluster-distance-performance.svg)  | Cluster Distance Performance  | This model can help you understand the performance of centroid-based (e.g. Kmeans) cluster models |
 
 
