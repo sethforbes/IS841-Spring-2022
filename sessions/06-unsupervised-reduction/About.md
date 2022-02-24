@@ -20,4 +20,9 @@ Slides:  https://docs.google.com/presentation/d/1JcThXWcYaHc9_ebOZhaeTc3gfi-7cwV
 
 - PCA to reduce our features in order to create new attributes for downstream tasks
 - Evaluation of how many components to retain
-- 
+- Discuss TSNE as a non-linear alternative to PCA along with the tradeoffs in performance.
+
+## Dedicated Team Work
+
+- Time to meet in class as a team
+
