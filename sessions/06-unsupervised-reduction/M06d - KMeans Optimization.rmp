@@ -100,7 +100,7 @@
             <parameter key="use_local_random_seed" value="false"/>
             <parameter key="local_random_seed" value="1992"/>
           </operator>
-          <operator activated="true" class="apply_model" compatibility="9.10.001" expanded="true" height="82" name="Apply Model" width="90" x="246" y="289">
+          <operator activated="true" class="apply_model" compatibility="9.10.001" expanded="true" height="82" name="Apply Model" width="90" x="167" y="392">
             <list key="application_parameters"/>
             <parameter key="create_view" value="false"/>
           </operator>
@@ -111,7 +111,7 @@
             <parameter key="maximize" value="true"/>
           </operator>
           <operator activated="true" class="performance_to_data" compatibility="9.10.001" expanded="true" height="82" name="Performance to Data" width="90" x="515" y="136"/>
-          <operator activated="true" class="generate_attributes" compatibility="9.10.001" expanded="true" height="82" name="Generate Attributes" width="90" x="514" y="289">
+          <operator activated="true" class="generate_attributes" compatibility="9.10.001" expanded="true" height="82" name="Generate Attributes" width="90" x="514" y="290">
             <list key="function_descriptions">
               <parameter key="k" value="param(&quot;kmeans&quot;, &quot;k&quot;)"/>
               <parameter key="dist_algo" value="param(&quot;kmeans&quot;, &quot;numerical_measure&quot;)"/>

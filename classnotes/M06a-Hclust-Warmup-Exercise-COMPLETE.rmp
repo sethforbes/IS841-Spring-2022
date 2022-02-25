@@ -37,12 +37,12 @@
         <parameter key="kernel_a" value="1.0"/>
         <parameter key="kernel_b" value="0.0"/>
       </operator>
-      <operator activated="true" class="flatten_clustering" compatibility="9.10.001" expanded="true" height="82" name="Flatten Clustering" width="90" x="485" y="290">
+      <operator activated="false" class="flatten_clustering" compatibility="9.10.001" expanded="true" height="82" name="Flatten Clustering" width="90" x="486" y="290">
         <parameter key="number_of_clusters" value="3"/>
         <parameter key="add_as_label" value="false"/>
         <parameter key="remove_unlabeled" value="false"/>
       </operator>
-      <operator activated="true" class="write_csv" compatibility="9.10.001" expanded="true" height="82" name="Write CSV" width="90" x="623" y="230">
+      <operator activated="false" class="write_csv" compatibility="9.10.001" expanded="true" height="82" name="Write CSV" width="90" x="624" y="230">
         <parameter key="csv_file" value="/Users/brock2/Downloads/hclust-3.csv"/>
         <parameter key="column_separator" value=","/>
         <parameter key="write_attribute_names" value="true"/>
@@ -54,11 +54,13 @@
       </operator>
       <connect from_op="Retrieve cars" from_port="output" to_op="Set Role" to_port="example set input"/>
       <connect from_op="Set Role" from_port="example set output" to_op="Clustering" to_port="example set"/>
-      <connect from_op="Clustering" from_port="cluster model" to_op="Flatten Clustering" to_port="hierarchical"/>
-      <connect from_op="Clustering" from_port="example set" to_op="Flatten Clustering" to_port="example set"/>
+      <connect from_op="Clustering" from_port="cluster model" to_port="result 1"/>
+      <connect from_op="Clustering" from_port="example set" to_port="result 2"/>
       <connect from_op="Flatten Clustering" from_port="example set" to_op="Write CSV" to_port="input"/>
       <portSpacing port="source_input 1" spacing="0"/>
       <portSpacing port="sink_result 1" spacing="0"/>
+      <portSpacing port="sink_result 2" spacing="0"/>
+      <portSpacing port="sink_result 3" spacing="0"/>
       <description align="center" color="gray" colored="true" height="160" resized="true" width="538" x="103" y="12">Warmup Exercise&lt;br&gt;- Read in the Cars dataset from /datasets for the class repo&lt;br&gt;- Perform any necessary data cleaning/filtering steps&lt;br&gt;- Apply Hclust to the data&lt;br&gt;- Review the solutions (you may need to run a few times)&lt;br&gt;- Flatten the clusters to extract the clusters&lt;br&gt;- Write the CSV file for review in Tableau&lt;br&gt;</description>
     </process>
   </operator>
