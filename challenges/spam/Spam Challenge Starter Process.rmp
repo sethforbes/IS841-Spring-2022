@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?><process version="9.10.001">
+  <context>
+    <input/>
+    <output/>
+    <macros/>
+  </context>
+  <operator activated="true" class="process" compatibility="9.10.001" expanded="true" name="Process">
+    <parameter key="logverbosity" value="init"/>
+    <parameter key="random_seed" value="2001"/>
+    <parameter key="send_mail" value="never"/>
+    <parameter key="notification_email" value=""/>
+    <parameter key="process_duration_for_mail" value="30"/>
+    <parameter key="encoding" value="SYSTEM"/>
+    <process expanded="true">
+      <operator activated="false" class="operator_toolbox:caching_subprocess" compatibility="2.12.000" expanded="true" height="82" name="Build Dataset" width="90" x="45" y="245">
+        <parameter key="caching_strategy" value="auto"/>
+        <parameter key="cache_uuid" value="e0343da7-49d6-4b91-a499-1c612ea02f6c"/>
+        <process expanded="true">
+          <operator activated="true" class="retrieve" compatibility="9.10.001" expanded="true" height="68" name="Retrieve train" width="90" x="45" y="34">
+            <parameter key="repository_entry" value="train"/>
+          </operator>
+          <operator activated="true" class="set_role" compatibility="9.10.001" expanded="true" height="82" name="Set Role" width="90" x="179" y="34">
+            <parameter key="attribute_name" value="id"/>
+            <parameter key="target_role" value="id"/>
+            <list key="set_additional_roles"/>
+          </operator>
+          <operator activated="true" class="generate_attributes" compatibility="9.10.001" expanded="true" height="82" name="set train" width="90" x="308" y="83">
+            <list key="function_descriptions">
+              <parameter key="split" value="&quot;train&quot;"/>
+            </list>
+            <parameter key="keep_all" value="true"/>
+          </operator>
+          <operator activated="true" class="retrieve" compatibility="9.10.001" expanded="true" height="68" name="Retrieve test" width="90" x="9" y="349">
+            <parameter key="repository_entry" value="test"/>
+          </operator>
+          <operator activated="true" class="set_role" compatibility="9.10.001" expanded="true" height="82" name="eval role" width="90" x="179" y="340">
+            <parameter key="attribute_name" value="id"/>
+            <parameter key="target_role" value="id"/>
+            <list key="set_additional_roles"/>
+          </operator>
+          <operator activated="true" class="generate_attributes" compatibility="9.10.001" expanded="true" height="82" name="set eval" width="90" x="312" y="288">
+            <list key="function_descriptions">
+              <parameter key="split" value="&quot;eval&quot;"/>
+              <parameter key="label" value="&quot;&quot;"/>
+            </list>
+            <parameter key="keep_all" value="true"/>
+            <description align="center" color="transparent" colored="false" width="126">Add attribute to dataset for filtering and splitting</description>
+          </operator>
+          <operator activated="true" class="append" compatibility="9.9.002" expanded="true" height="103" name="Append" width="90" x="447" y="187">
+            <parameter key="datamanagement" value="double_array"/>
+            <parameter key="data_management" value="auto"/>
+            <parameter key="merge_type" value="all"/>
+          </operator>
+          <operator activated="true" class="set_role" compatibility="9.10.001" expanded="true" height="82" name="Set Label" width="90" x="581" y="187">
+            <parameter key="attribute_name" value="label"/>
+            <parameter key="target_role" value="label"/>
+            <list key="set_additional_roles">
+              <parameter key="split" value="split"/>
+            </list>
+          </operator>
+          <connect from_op="Retrieve train" from_port="output" to_op="Set Role" to_port="example set input"/>
+          <connect from_op="Set Role" from_port="example set output" to_op="set train" to_port="example set input"/>
+          <connect from_op="set train" from_port="example set output" to_op="Append" to_port="example set 1"/>
+          <connect from_op="Retrieve test" from_port="output" to_op="eval role" to_port="example set input"/>
+          <connect from_op="eval role" from_port="example set output" to_op="set eval" to_port="example set input"/>
+          <connect from_op="set eval" from_port="example set output" to_op="Append" to_port="example set 2"/>
+          <connect from_op="Append" from_port="merged set" to_op="Set Label" to_port="example set input"/>
+          <connect from_op="Set Label" from_port="example set output" to_port="out 1"/>
+          <portSpacing port="source_in 1" spacing="0"/>
+          <portSpacing port="sink_out 1" spacing="0"/>
+          <portSpacing port="sink_out 2" spacing="0"/>
+          <description align="center" color="yellow" colored="false" height="108" resized="false" width="180" x="63" y="161">You might need to change the location of the datasets in the class repo to the location on your own computer</description>
+        </process>
+        <description align="center" color="transparent" colored="false" width="126">Subprocess that stacks the dataset and flags the train and test sets&lt;br&gt;&lt;br&gt;NOTE: Caching operator from Operator Toolbox Extension required</description>
+      </operator>
+      <operator activated="false" class="filter_examples" compatibility="9.10.001" expanded="true" height="103" name="Filter - Train/Test" width="90" x="209" y="472">
+        <parameter key="parameter_expression" value=""/>
+        <parameter key="condition_class" value="custom_filters"/>
+        <parameter key="invert_filter" value="false"/>
+        <list key="filters_list"/>
+        <parameter key="filters_logic_and" value="true"/>
+        <parameter key="filters_check_metadata" value="true"/>
+        <description align="center" color="transparent" colored="false" width="126">Filter for Train&lt;br/&gt;&lt;br/&gt;The unmatched records are the test set</description>
+      </operator>
+      <portSpacing port="source_input 1" spacing="0"/>
+      <portSpacing port="sink_result 1" spacing="0"/>
+      <description align="left" color="gray" colored="true" height="186" resized="true" width="673" x="38" y="10">Notes;&lt;br&gt;&lt;br&gt;Build dataset will combine the datasets so that all of your text preprocessing can be applied to both the train and test sets.&lt;br&gt;&lt;br&gt;There is an attribute to Filter the Examples to train the model on the Training set, and apply it to the test set for the leaderboard submission.&lt;br&gt;&lt;br&gt;HINT: Nominal to Text so that RM can apply text operations.&lt;br&gt;</description>
+    </process>
+  </operator>
+</process>
