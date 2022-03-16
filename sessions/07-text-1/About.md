@@ -10,5 +10,5 @@ Slides:  https://docs.google.com/presentation/d/1WBFc73I4Fb4sDKD72ysMvkTK-OnFEsV
 
 # Team Challenge - Spam Prediction:
 
-Server: 
+Server:  http://34.145.168.9:8501/
 
